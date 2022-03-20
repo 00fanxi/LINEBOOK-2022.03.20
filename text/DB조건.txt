@@ -1,0 +1,10 @@
+1. connectdata db 생성, couter db생성
+2. counter db밑에 id_counter와 sharenum_counter collection 생성
+3. 각각 collection에 DOC 하나씩 생성 _id는 각각의 이름 부여 (id_counter,sharenum_counter)
+{_id : "id_counter", id_counter : 0} {_id : "sharenum_counter", sharenum_counter : 0}
+4. id_counter : 0, sharenum_counter : 0 입력 후 프로그램 시작
+5. counter db 밑에 node_tree collection 생성
+
+
+//노드 만들시 node_tree collection에 doc 생성
+{_id : '시험실', upper_node : '시험실', under_node : ['교환기','MBcN'] }

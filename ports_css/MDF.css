@@ -1,0 +1,144 @@
+/*mdf 100 =>지금의 PORT templete */
+
+/* 공통 사항*/
+.port_controlers{
+	display:flex;
+	flex-flow:row wrap;
+	height:9.3rem;
+	width:13rem;
+}
+
+.deleteport{
+	height:1.7rem;
+	width:13rem;
+}
+
+.spread{
+	width : 6.5rem;
+	background : #04AA6D;
+	cursor: pointer;
+	border-radius:0.1rem;
+	border: 0.2rem solid #4CAF50;
+}
+
+.spread:hover{
+	background-color: #4CAF50;
+	color: white;
+}
+
+.porttype{
+	width : 6.3rem;
+	font-weight: 900;
+	text-align: center;
+	border: 0.1rem solid black;
+	border-radius: 0.1rem;
+}
+
+.set_disable_select,.set_disable_button,.remove_disable_select,.remove_disable_button{
+	height:1.7rem;
+	width:6.32rem;
+}
+
+.set_disable_button{
+	font-weight:900;
+	color:white;
+	background:red;
+}
+
+.remove_disable_button{
+	font-weight:900;
+	color:white;
+	background:green;
+}
+
+#disable_party_block{
+	width:13rem;
+}
+
+.deleteport{
+	font-weight:900;
+	color:white;
+	background:red;
+}
+
+/*MDF */
+
+.mdf100 .portsinport{
+	width:13rem;
+	display:flex;
+	flex-flow:wrap;
+}
+
+.mdf100{
+	margin-top:1rem;
+	margin-bottom:6.2rem;
+	margin-right:2rem;
+	display:flex;
+	flex-flow:wrap;
+	width:13rem;
+}
+
+.mdf100 .num{
+	border:solid black 0.1rem;
+	width:2.40109rem;
+	margin:0;
+	height:2rem;
+	text-align:center;
+	font-size:1rem;
+	font-weight:700;
+}
+
+.mdf100 .nodetitle,.mdf100 .porttitle{
+	text-align:center;
+	width:13rem;
+}
+
+.mdf100 .h{
+	border:solid black 0.1rem;
+	text-align:center;
+	background:gray;
+	color:white;
+}
+
+.mdf100 .port{
+	width:2.40109rem;
+}
+.mdf100 .use{
+	width:7rem;
+}
+.mdf100 .refer{
+	width:3rem
+}
+
+.mdf100 .usage{
+	width:6.701rem;
+	text-overflow: ellipsis;
+}
+
+.mdf100 .ref{
+	width:2.7rem;
+	text-overflow: ellipsis;
+}
+
+.mdf100 .label,.display{
+	border:solid black 0.1rem;
+	text-align:center;
+}
+
+.mdf100 .display{
+	width:2.1rem;
+}
+
+.mdf100 .ing{
+	width:4rem;
+	background:green;
+}
+
+.mdf100 .disable{
+	width:4rem;
+	background:red;
+}
+.mdf100 .bridge{
+	width:4rem;
+	background:orange;
+}

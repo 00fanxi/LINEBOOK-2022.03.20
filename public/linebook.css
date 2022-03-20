@@ -1,0 +1,496 @@
+/*searched*/
+
+.searched_result_form{
+	position : fixed;
+	display : flex;
+	flex-flow : column nowrap;
+	align-items: center;
+	border:0.1rem solid black;
+	background : white;
+	width : 40rem;
+	height : 40rem;
+	left : 40rem;
+
+	box-shadow: 0 4px 8px 0 rgba(0,0,0.2);
+	border-radius: 0.5rem;
+	text-align : center;
+
+}
+
+.searched_result_form .content{
+	display : flex;
+	flex-flow : column nowrap;
+	align-items: center;
+	width : 38rem;
+	height : 35rem;
+	overflow-y:scroll;
+}
+
+.searched_result_form str{
+	font-weight : 600;
+}
+
+.searched_result_form .title{
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.searched_result_form input{
+	margin-left :36.5rem;
+	width:3rem;
+}
+
+.searched_result_form a{
+	border-radius: 0.2rem;
+	border:0.1rem solid black;
+	height : 3rem;
+	width : 90%;
+	color :black;
+	text-decoration: none;
+	margin : 0.5rem;
+}
+
+.searched_result_form a:hover{
+	background : grey;
+}
+
+/*order_port_form*/
+.order_port_form{
+	position : fixed;
+	display : flex;
+	flex-flow : column nowrap;
+	justify-content: space-around;
+	border:0.1rem solid black;
+	background : white;
+	width : 20rem;
+	height : 10rem;
+	left : 40rem;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0.2);
+	border-radius: 0.5rem;
+	text-align : center;
+}
+
+#order_port_off{
+	display : none;
+}
+
+#order_port_on{
+	display : flex;
+}
+
+.order_port_form .title{
+	width : 100%;
+	font-size: 1.5rem;
+	border-bottom : 0.1rem solid grey;
+}
+
+/*allconnect*/
+#allconOff{
+	display:none;
+}
+
+#allconOn{
+	display:flex;
+}
+
+#target_connect{
+	border : red solid 0.2rem;
+}
+
+.allconnect{
+	position :fixed;
+	top : 5rem;
+	z-index:1;
+	left: 10rem;
+}
+
+.allconnect_body .card{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0.2);
+	border-radius: 0.5rem;
+	width: 13rem;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.allconnect_body{
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100rem;
+	height : 40rem;
+	border:0.1rem solid black;
+	border-radius: 0.5rem;
+	background: white;
+	overflow: scroll;
+}
+
+.allconnect_body .title{
+	margin : 1rem;
+	text-align: center;
+	font-size: 1.7rem;
+}
+
+.allconnect_row{
+	display:flex;
+	flex-flow:row;
+	padding : 1rem;
+}
+
+.allconnect_body .content{
+	height : 2rem;
+	width : 15rem;
+	text-align: center;
+}
+
+.allconnect_body select{
+	height :2.3rem;
+	padding :0.1rem;
+}
+
+.allconnect_body .change{
+	height : 2.3rem;
+	width : 4.3rem;
+	color: black;
+	background:#04AA6D;
+	border-radius:0.5rem;
+  border: 0.2rem solid #4CAF50;
+}
+
+.allconnect_body .change:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.allconnect_body .row{
+	border-top: 0.1rem solid black;
+	border-bottom : 0.1rem solid black;
+	width : 50rem;
+	height : 4rem;
+	font-size: 1.1rem;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+}
+
+.allconnect_body .nodename{
+	background:RGB(070,172,161);
+	width: 100%;
+	text-align: center;
+	color:white;
+	margin-bottom: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom:0.5rem;
+	font-size: 1.5rem;
+	font-weight: 900;
+	border-radius: 0.5rem;
+}
+
+.allconnect_body p{
+	margin: 0.5rem;
+}
+
+.allconnect_body .portname{
+	border-top: 0.3rem solid black;
+}
+
+.allconnect_column{
+		display:flex;
+		flex-flow:column nowrap;
+		align-items: center;
+		width : 15rem;
+		border:0.1rem dashed grey;
+		border-radius: 0.5rem;
+}
+
+.allconnect_body button{
+	width:2.5rem;
+	height:1.5rem;
+	background:red;
+	color : white;
+	border-radius: 0.2rem;
+	position : fixed;
+}
+
+.allconnect_body button:hover{
+	background-color: #f44336;
+	color: white;
+}
+
+/*전체 레이아웃 관리*/
+*{
+	font-family: Arial;
+	font-weight : 500;
+}
+
+html{
+	font-family: Arial, Helvetica, sans-serif;
+	overflow-x: hidden;
+}
+
+nav{
+	height:3rem;
+	display:flex;
+	width:100%;
+	flex-flow:row-reverse;
+	border-bottom:0.1rem black solid;
+	align-items:center;
+	background:gray;
+	padding-right:3rem;
+	position:fixed;
+	z-index:10;
+	border:solid 0.2rem white;
+}
+
+nav input{
+	height:2rem;
+	margin-right:1rem;
+	background :white;
+	border-radius: 0.3rem;
+	border :0.1rem solid black;
+}
+
+nav input:hover{
+	background:RGB(070,172,161);
+	color:white;
+	border:0.1rem solid white;
+	font-weight:700;
+}
+
+.logOut{
+	margin-right: 23rem;
+}
+
+nav .search_string{
+	text-align: center;
+}
+
+.search_string{
+	width:30rem;
+	margin-right:0;
+}
+
+.search_string_submit{
+	height:2.4rem;
+}
+
+.homebody{
+	display:flex;
+	width:auto;
+	overflow:hidden;
+	height:auto;
+	margin-top:3rem;
+}
+
+.ports{
+	width:90%;
+	display:flex;
+	flex-flow:row wrap;
+	padding-left:1rem;
+}
+
+body{
+	margin:0;
+	width:auto;
+}
+
+/*nodelist*/
+
+.nodelist{
+	border-right:1px solid black;
+	width:13.2rem;
+	margin : 0;
+	padding:1rem;
+	overflow-y:scroll;
+	height:auto;
+	display:flex;
+	flex-flow:column;
+}
+
+.nodelist .row{
+	display : flex;
+	flex-flow : row;
+	height : 1.5rem;
+	align-items: center;
+	width : 100%;
+	border-bottom : 0.1rem solid grey;
+}
+
+.nodelist a{
+	text-decoration: none;
+	color : black;
+	width:90%;
+}
+
+.nodelist input{
+	width:1rem;
+	margin-right: 0.2rem;
+	height:1rem;
+	text-align: center;
+	font-size: 0.7rem;
+	padding:0;
+}
+
+.nodelist input:hover{
+	background: grey;
+}
+
+.nodelist a:hover{
+	border:0.1rem solid grey;
+	color : white;
+	background:RGB(070,172,161);
+	border-radius: 0.2rem;
+	text-align: center;
+}
+
+h1{
+	text-align:center;
+	border-bottom:black solid 1px;
+	padding:1rem;
+	background:RGB(070,172,161);
+	color:white;
+	margin:0;
+	font-weight : 900;
+	font-size:2.5rem;
+	position:relative;
+	width:100vw;
+	top:3rem;
+	border:solid 0.2rem white;
+}
+
+/*새 포트 생성 폼*/
+
+.newportform{
+	height:28rem;
+	width:25rem;
+	display:none;
+	position:fixed;
+	top:10rem;
+	right:50rem;
+	flex-flow:column;
+	justify-content:space-evenly;
+	align-items:center;
+	border:solid black 0.01rem;
+	border-radius:5%;
+	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background:white;
+	}
+
+.newportform h2{
+	text-align: center;
+	border-bottom: 0.1rem solid grey;
+	width : 20rem;
+	margin : 0;
+	padding : 1rem;
+}
+
+.newportsubmit,.newportquit{
+	margin-top:1.2rem;
+	height:2rem;
+	width:5rem;
+	margin-bottom:1rem;
+	background:#04AA6D;
+	border-radius:0.5rem;
+	border: none;
+  cursor: pointer;
+	color:white;
+	opacity:0.8;
+}
+
+.newportsubmit {
+  color: black;
+  border: 0.2rem solid #4CAF50;
+}
+
+.newportsubmit:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.newportquit{
+	background-color: red;
+	margin-right:1rem;
+}
+
+.newportquit:hover{
+	background-color: #f44336;
+  color: white;
+}
+
+.port_name_part{
+	display:flex;
+	flex-flow:row nowrap;
+	align-items:center;
+	height:1.2rem;
+}
+
+.port_name_part input{
+	margin:0.2rem;
+	height:1.5rem;
+}
+
+.TR{
+	height:1rem;
+}
+
+/*새 노드 생성 폼*/
+
+.newnodeform{
+	display:none;
+	position:fixed;
+	flex-flow:row wrap;
+	justify-content:center;
+	width:20rem;
+	position:absolute;
+	left:50rem;
+	top: 6rem;
+	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border:0.01rem solid black;
+	border-radius:5%;
+	background:white;
+}
+
+.newnodeform .row{
+	margin-bottom : 1rem;
+	padding-bottom : 0.5rem;
+	border-bottom :solid 0.1rem grey;
+	width : 18rem;
+	display: flex;
+	justify-content: center;
+}
+
+.newnodeform select{
+	margin-left: 0.5rem;
+}
+
+.newnodetext{
+	display:block;
+	background:#f1f1f1;
+	height:2rem;
+	text-align:center;
+	width:15rem;
+}
+
+.newnodequit,.newnodesubmit{
+	display:block;
+	margin-top:1rem;
+	height:2rem;
+	margin-bottom:1rem;
+	background:#04AA6D;
+	border: none;
+  cursor: pointer;
+	color:white;
+	opacity:0.8;
+}
+
+.newnodequit{
+	background-color: red;
+	margin-right:1rem;
+}
+
+
+/*버튼들 관리*/
+
+.deleteform{
+	display:inline;
+}

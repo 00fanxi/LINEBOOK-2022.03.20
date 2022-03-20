@@ -1,0 +1,47 @@
+admin
+
+
+
+
+
+
+client
+
+1. '/' 경로 접속해서 노드들 보기
+2. '/check/nodename' 경로로 들어왔을시 'access_denied' alert : '권한이 없는 계정입니다.'
+3. '/check/portname' 경로로 들어왔을시 'access_denied' alert : '권한이 없는 계정입니다.'
+4. '/check/deletenode' 경로로 들어왔을시 'access_denied' alert : '권한이 없는 계정입니다.'
+5. '/check/deleteport' 경로로 들어왔을시 'access_denied' alert : '권한이 없는 계정입니다.'
+6. '/create/newnode' 경로로 들어올시 (UI로는 접근 불가, 악성 유저) : 'access_denied'화면 출력.
+7. '/create/newport' 경로로 들어올시 (UI로는 접근 불가, 악성 유저) : 'access_denied'화면 출력.
+8. '/save/refer' 경로로 들어왔을시 'access_denied' 어차피 ajax로 서버에서 나가는 데이터가 없으므로 서버쪽에서 무시.
+9. '/save/usage' 경로로 들어왔을시 'access_denied' 어차피 ajax로 서버에서 나가는 데이터가 없으므로 서버쪽에서 무시.
+10. '/save/disable' 경로로 들어왔을시 'access_denied' 어차피 ajax로 서버에서 나가는 데이터가 없으므로 서버쪽에서 무시.
+11. '/save/available' 경로로 들어왔을시 'access_denied' 어차피 ajax로 서버에서 나가는 데이터가 없으므로 서버쪽에서 무시.
+12. '/delete/node' 경로로 들어올시 (UI로는 접근 불가, 악성 유저) : 'access_denied'화면 출력.
+13. '/delete/port' 경로로 들어올시 (UI로는 접근 불가, 악성 유저) : 'access_denied'화면 출력.
+14. "/connect/thisnode" 경로로 들어올시 (UI로는 접근 불가, 악성 유저) : 'access_denied'화면 출력.
+15. "/connect/oppnode" 경로로 들어올시 (UI로는 접근 불가, 악성 유저) : 'access_denied'화면 출력.
+16. "/connect/portname" 경로로 들어올시 (UI로는 접근 불가, 악성 유저) : 'access_denied'화면 출력.
+17. "/connect/connecting" 경로로 들어올시 (UI로는 접근 불가, 악성 유저) : 'access_denied'화면 출력.
+18. "/connect/disconnecting" 경로로 들어올시 (UI로는 접근 불가, 악성 유저) : 'access_denied'화면 출력.
+19. "/connect_control" 경로로 들어왔을시 access_denied template 출력 3초 후 홈으로 리다이렉;
+20. "/order/port" 경로로 들어왔을시 access_denied template 출력 3초 후 홈으로 리다이렉;
+21. "/allconnect" 경로는 클라이언트도 접근 가능
+22. "/allconnect/change" 경로로 들어왔을시 access_denied template 출력 3초 후 홈으로 리다이렉;
+23. "/search" 경로는 클라이언트도 접근 가능
+
+if(checkCookieAdmin()){
+
+}else{
+  var result = ('access_denied');
+  response.writeHead(200)
+  response.end(result);
+}
+
+var result = template.access_denied();
+response.writeHead(200)
+response.end(result);
+
+
+// 권한 설정 완료
