@@ -236,8 +236,7 @@ function selfInput(){
 }
 
 // 새 포트 생성 폼에서 CDF-E1 선택시 TX/RX 선택창 표시
-function CDF_TR_check(){
-	console.log(document.querySelector('.port_type').value)
+function CDF_TR_checkANDcore(){
 	if(document.querySelector('.port_type').value==="CDF_E1"){
 		document.querySelector('.CDF_TR').style.display="block";
 	}else{
