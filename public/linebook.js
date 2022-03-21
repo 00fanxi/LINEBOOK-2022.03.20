@@ -228,6 +228,26 @@ function removing_disable(self){
 
 //새 포트 생성 폼에서 직접입력시 숫자 입력창 표시
 function selfInput(){
+	var FDF_core = `<div class="FDF_core">
+		<label>
+		3.코어 수
+		<select name="port_number" class="port_number" onchange="selfInput()">
+			<option value="4">4c</option>
+			<option value="8">8c</option>
+			<option value="12">12c</option>
+			<option value="16">16c</option>
+			<option value="24">24c</option>
+			<option value="48">48c</option>
+			<option value="72">72c</option>
+			<option value="144">144c</option>
+			<option value="others">직접입력</option>
+		</select>
+		</label>
+		<input type="number" class="port_number_selfInput" placeholder="직접입력." name="port_number_selfInput" min="4" max="144" style="display: none">
+		</div>`
+	
+	var normal_port = `
+		
 	if(document.querySelector('.newportform .port_number').value==="others"){
 		document.querySelector('.port_number_selfInput').style.display="block"
 	}else{
