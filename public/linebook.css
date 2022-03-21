@@ -258,7 +258,7 @@ nav input:hover{
 }
 
 .logOut{
-	margin-right: 23rem;
+	margin-right: 30rem;
 }
 
 nav .search_string{
@@ -395,6 +395,18 @@ h1{
   cursor: pointer;
 	color:white;
 	opacity:0.8;
+}
+
+.normal_port, .FDF_core{
+	display : flex;
+	flex-flow : column;
+	align-items : center;
+}
+
+.port_number_selfInput{
+	margin-top : 1rem;
+	width : 5rem;
+	height : 1.2rem;
 }
 
 .newportsubmit {
