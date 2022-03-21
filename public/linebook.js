@@ -246,7 +246,21 @@ function selfInput(){
 		<input type="number" class="port_number_selfInput" placeholder="직접입력." name="port_number_selfInput" min="4" max="144" style="display: none">
 		</div>`
 	
-	var normal_port = `
+	var normal_port = `<div class="normal_port">
+		<label>
+		3.포트 수
+		<select name="port_number" class="port_number" onchange="selfInput()">
+			<option value="25">25p</option>
+			<option value="42">42p</option>
+			<option value="50">50p</option>
+			<option value="75">75p</option>
+			<option value="100">100p</option>
+			<option value="128">128p</option>
+			<option value="others">직접입력</option>
+		</select>
+		</label>
+		<input type="number" class="port_number_selfInput" placeholder="직접입력" name="port_number_selfInput" min="4" max="128" style="display: none">
+		</div>`
 		
 	if(document.querySelector('.newportform .port_number').value==="others"){
 		document.querySelector('.port_number_selfInput').style.display="block"
@@ -259,8 +273,13 @@ function selfInput(){
 function CDF_TR_checkANDcore(){
 	if(document.querySelector('.port_type').value==="CDF_E1"){
 		document.querySelector('.CDF_TR').style.display="block";
+		document.querySelector('.port_or_core').innerHTML = normal_port;
+	}else if(document.querySelector('.port_type').value==="FDF"){
+		document.querySelector('.CDF_TR').style.display="none";
+		document.querySelector('.port_or_core').innerHTML = FDF_core;
 	}else{
 		document.querySelector('.CDF_TR').style.display="none";
+		document.querySelector('.port_or_core').innerHTML = normal_port;
 	}
 }
 
