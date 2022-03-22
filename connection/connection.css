@@ -195,9 +195,9 @@ body{
 	flex-flow:column;
 	align-items:center;
 	background:gray;
-	border-radius:0.5rem;
+	border-radius:0.3rem;
 	padding:0.2rem;
-	width:15.28rem;
+	width:20rem;
 	height:2.8rem;
 	text-align:center;
 }
@@ -219,8 +219,8 @@ body{
 	flex-flow:row;
 	align-items:center;
 	justify-content:center;
-	font-size:1.3rem;
-	width:20rem;
+	font-size:1.1rem;
+	width:30rem;
 	margin:0;
 }
 
