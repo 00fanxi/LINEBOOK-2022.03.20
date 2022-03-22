@@ -141,9 +141,11 @@ function spread_FDF(self){
 function close_nodelist(self){
 	if(self.value === "노드리스트 닫기"){
 		document.querySelector('.nodelist').style.display = 'none';
+		document.querySelector('.ports').style.paddingLeft = '1rem';
 		self.value = "노드리스트 보기";
 	}else{
 		document.querySelector('.nodelist').style.display = 'flex';
+		document.querySelector('.ports').style.paddingLeft = '16rem';
 		self.value = "노드리스트 닫기";
 	}
 }
